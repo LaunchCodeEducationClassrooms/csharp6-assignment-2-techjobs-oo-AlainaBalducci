@@ -55,7 +55,7 @@ namespace TechJobs.Tests
         [TestMethod]
         public void TestToStringHandlesEmptyField()
         {
-            Assert.AreEqual("\nID: 1\nName: Data not available\nEmployer: Data not available\nLocation: Data not available\nPosition Type: Data not available\nCore Competency: Data not available\n", job3.ToString());
+            Assert.AreEqual("\nID: 1\nName: Data not available\nEmployer: Data not available\nLocation: Data not available\nPosition Type: Data not available\nCore Competency: Data not available\n", job1.ToString());
         }
     }
 }
