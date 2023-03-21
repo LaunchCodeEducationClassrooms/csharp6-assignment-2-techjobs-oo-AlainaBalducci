@@ -36,7 +36,26 @@ namespace TechJobs.Tests
         [TestMethod]
         public void TestJobsForEquality()
         {
-           Assert.IsFalse(job1.Equals(job2));
+            Assert.IsFalse(job1.Equals(job2));
+        }
+
+        [TestMethod]
+        public void TestToStringStartsAndEndsWithNewLine()
+        {
+            Assert.IsTrue(job3.ToString().EndsWith("\n"));
+            Assert.IsTrue(job3.ToString().StartsWith("\n"));
+        }
+
+        [TestMethod]
+        public void TestToStringContainsCorrectLabelsAndData()
+        {
+            Assert.AreEqual("\nID: 3\nName: Product tester\nEmployer: ACME\nLocation: Desert\nPosition Type: Quality control\nCore Competency: Persistence\n", job3.ToString());
+        }
+
+        [TestMethod]
+        public void TestToStringHandlesEmptyField()
+        {
+            Assert.AreEqual("\nID: 1\nName: Data not available\nEmployer: Data not available\nLocation: Data not available\nPosition Type: Data not available\nCore Competency: Data not available\n", job3.ToString());
         }
     }
 }

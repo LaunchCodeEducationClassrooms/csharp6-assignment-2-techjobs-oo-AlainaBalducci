@@ -1,8 +1,8 @@
 ﻿using System;
 namespace TechJobsOOAutoGraded6
 {
-	public class Job
-	{
+    public class Job
+    {
 
 
         public int Id { get; }
@@ -42,7 +42,65 @@ namespace TechJobsOOAutoGraded6
 
 
 
+        public override string ToString()
+        {
+            //if (JobCoreCompetency == null || Name == null || EmployerName == null || EmployerLocation == null || JobType == null)
+            //{
+            //    return "Data not available";
+            //}
+            //else
+            //{
+            string newString = "\nID: " + Id + "\n";
+            if (Name == "")
+            {
+                newString += "Name: " + "Data not available" + "\n";
+            }
+            else
+            {
+                newString += "Name: " + Name + "\n";
+            }
+            if (EmployerName.Value == "")
+            {
+                newString += "Employer: " + "Data not available" + "\n";
+            }
+            else
+            {
+               newString += "Employer: " + EmployerName + "\n";
+            }
+            if (EmployerLocation.Value == "")
+            {
+                newString += "Location: " + "Data not available" + "\n";
+            }
+            else
+            {
+                newString += "Location: " + EmployerLocation + "\n";
+            }
+            if (JobType.Value == "")
+            {
+                newString += "Position Type: " + "Data not available" + "\n";
+            }
+            else
+            {
+                newString += "Position Type: " + JobType + "\n";
+            }
+            if (JobCoreCompetency.Value == "")
+            {
+                return newString += "Core Competency: " + "Data not available" + "\n";
+            }
+            else
+            {
+                return newString += "Core Competency: " + JobCoreCompetency + "\n";
+            }
 
+            //return
+            //"\nID: " + Id + "\n" +
+            //    "Name: " + Name + "\n" +
+            //    "Employer: " + EmployerName + "\n" +
+            //    "Location: " + EmployerLocation + "\n" +
+            //    "Position Type: " + JobType + "\n" +
+            //    "Core Competency: " + JobCoreCompetency + "\n";
+            //}
+        }
         // TODO: Task 3: Generate Equals() and GetHashCode() methods.  
 
         // TODO: Task 5: Generate custom ToString() method.
