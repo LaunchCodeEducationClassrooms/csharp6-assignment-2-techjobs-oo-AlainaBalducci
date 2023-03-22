@@ -86,8 +86,5 @@ namespace TechJobsOOAutoGraded6
     // TODO: Task 5: Generate custom ToString() method.
     //Until you create this method, you will not be able to print a job to the console.
 
-
-
-
 }
 

@@ -15,6 +15,7 @@ namespace TechJobs.Tests
 
         Job job4 = new Job("Product tester", new Employer("ACME"), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence"));
 
+        
         [TestMethod]
         public void TestSettingJobId()
         {
@@ -55,7 +56,9 @@ namespace TechJobs.Tests
         [TestMethod]
         public void TestToStringHandlesEmptyField()
         {
-            Assert.AreEqual("\nID: 1\nName: Data not available\nEmployer: Data not available\nLocation: Data not available\nPosition Type: Data not available\nCore Competency: Data not available\n", job1.ToString());
+            Job job4 = new Job("", new Employer("ACME"), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence"));
+
+            Assert.AreEqual("\nID: 5\nName: Data not available\nEmployer: ACME\nLocation: Desert\nPosition Type: Quality control\nCore Competency: Persistence\n", job4.ToString());
         }
     }
 }
