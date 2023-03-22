@@ -43,14 +43,14 @@ namespace TechJobs.Tests
         [TestMethod]
         public void TestToStringStartsAndEndsWithNewLine()
         {
-            Assert.IsTrue(job3.ToString().EndsWith("\n"));
-            Assert.IsTrue(job3.ToString().StartsWith("\n"));
+            Assert.IsTrue(job3.ToString().EndsWith(Environment.NewLine));
+            Assert.IsTrue(job3.ToString().StartsWith(Environment.NewLine));
         }
 
         [TestMethod]
         public void TestToStringContainsCorrectLabelsAndData()
         {
-            Assert.AreEqual("\nID: 3\nName: Product tester\nEmployer: ACME\nLocation: Desert\nPosition Type: Quality control\nCore Competency: Persistence\n", job3.ToString());
+            Assert.AreEqual(Environment.NewLine+"ID: 3"+ Environment.NewLine+"Name: Product tester"+Environment.NewLine+"Employer: ACME"+ Environment.NewLine+"Location: Desert"+ Environment.NewLine+"Position Type: Quality control"+ Environment.NewLine+"Core Competency: Persistence"+ Environment.NewLine, job3.ToString());
         }
 
         [TestMethod]
@@ -58,7 +58,7 @@ namespace TechJobs.Tests
         {
             Job job4 = new Job("", new Employer("ACME"), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence"));
 
-            Assert.AreEqual("\nID: 5\nName: Data not available\nEmployer: ACME\nLocation: Desert\nPosition Type: Quality control\nCore Competency: Persistence\n", job4.ToString());
+            Assert.AreEqual(Environment.NewLine + "ID: " +job4.Id + Environment.NewLine + "Name: Data not available" + Environment.NewLine + "Employer: ACME" + Environment.NewLine + "Location: Desert" + Environment.NewLine + "Position Type: Quality control" + Environment.NewLine + "Core Competency: Persistence" + Environment.NewLine, job4.ToString());
         }
     }
 }

@@ -73,12 +73,12 @@ namespace TechJobsOOAutoGraded6
 
 
             return
-                "\nID: " + Id + "\n" +
-                "Name: " + Name + "\n" +
-                "Employer: " + EmployerName + "\n" +
-                "Location: " + EmployerLocation + "\n" +
-                "Position Type: " + JobType + "\n" +
-                "Core Competency: " + JobCoreCompetency + "\n";
+                Environment.NewLine + "ID: " + Id + Environment.NewLine +
+                "Name: " + Name + Environment.NewLine +
+                "Employer: " + EmployerName + Environment.NewLine +
+                "Location: " + EmployerLocation + Environment.NewLine +
+                "Position Type: " + JobType + Environment.NewLine +
+                "Core Competency: " + JobCoreCompetency + Environment.NewLine;
         }
     }
     // TODO: Task 3: Generate Equals() and GetHashCode() methods.  
