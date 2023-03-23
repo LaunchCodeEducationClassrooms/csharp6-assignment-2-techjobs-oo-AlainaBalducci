@@ -6,13 +6,7 @@ namespace TechJobsOOAutoGraded6
        
         public CoreCompetency(string value) : base(value)
         {
-            Value = value; 
-        }
-
-        public override bool Equals(object obj)
-        {
-            return obj is CoreCompetency competency &&
-                   Id == competency.Id;
+            
         }
 
     }
